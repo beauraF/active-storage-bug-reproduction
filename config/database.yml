@@ -16,6 +16,7 @@ development:
   messages:
     <<: *default
     database: storage/development_messages.sqlite3
+    migrations_paths: db/messages_migrate
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,7 +28,7 @@ test:
   messages:
     <<: *default
     database: storage/test_messages.sqlite3
-
+    migrations_paths: db/messages_migrate
 
 # Store production database in the storage/ directory, which by default
 # is mounted as a persistent Docker volume in config/deploy.yml.
